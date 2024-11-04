@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
+import { getGiftsByCategory } from '../helpers/getGiftsByCategory';
+
+
 
 export const GiftGrid = ({ category }) => {
+
+    getGiftsByCategory(category);
 
     return (
         <>
