@@ -6,6 +6,7 @@ export const GiftExpertApp = () => {
   const [categories, setcategories] = useState(['One Punch', 'Dragon Ball'])
 
   const onAddCategory = (category) => {
+    if(categories.includes(category)) { return; }
     setcategories([category, ...categories]); 
   }
 
@@ -20,8 +21,8 @@ export const GiftExpertApp = () => {
         {/* Listado de Gifts */}
         <ol>
           {/* Gift item */}
-          { categories.map((category, index) => {
-            return (<li key={index}>{category}</li>)
+          { categories.map((category) => {
+            return (<li key={category}>{category}</li>)
           })}
         </ol>
     </>
