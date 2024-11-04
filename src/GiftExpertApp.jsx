@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { AddCategory } from "./components/AddCategory";
 
 export const GiftExpertApp = () => {
 
@@ -15,6 +16,7 @@ export const GiftExpertApp = () => {
         <h1>GiftExpertApp</h1>
 
         {/* Input */}
+        <AddCategory />
 
         {/* Listado de Gifts */}
         <button onClick={onAddCategory}>Add Category</button>
