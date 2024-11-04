@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { AddCategory } from "./components/AddCategory";
+import { GiftGrid } from "./components/GiftGrid";
 
 export const GiftExpertApp = () => {
 
@@ -12,19 +13,14 @@ export const GiftExpertApp = () => {
 
   return (
     <>
-        {/* Titulo */}
         <h1>GiftExpertApp</h1>
 
-        {/* Input */}
         <AddCategory onNewCategory={onAddCategory} />
 
-        {/* Listado de Gifts */}
-        <ol>
-          {/* Gift item */}
-          { categories.map((category) => {
-            return (<li key={category}>{category}</li>)
-          })}
-        </ol>
+        { categories.map((category) => (
+            <GiftGrid key={category} category={category} />
+          ))
+        }
     </>
   )
 }
