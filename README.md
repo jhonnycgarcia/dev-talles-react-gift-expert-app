@@ -16,3 +16,5 @@ Currently, two official plugins are available:
 `https://gist.github.com/Klerith/e4fca6ac127ccb9abd1e8ad77fcd52f1`
 
 `https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177`
+
+`https://react-hooks-testing-library.com/`
