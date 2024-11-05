@@ -13,7 +13,6 @@ export const GiftItem = ({ title, url }) => {
 }
 
 GiftItem.propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
