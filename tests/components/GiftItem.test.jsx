@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { GiftItem } from "../../src/components/GiftItem";
 
 
@@ -10,6 +10,18 @@ describe('Pruebas en <GiftItem />', () => {
     test('debe hacer match con el snapshot', () => {
         const { container } = render(<GiftItem title={title} url={url} />);
         expect(container).toMatchSnapshot();
+    });
+
+    test('debe mostrar imagen con el URL proporcionado', () => {
+        render(<GiftItem title={title} url={url} />);
+        const { src, alt} = screen.getByRole('img');
+        expect(src).toBe(url);
+        expect(alt).toBe(title);
+    });
+
+    test('debe mostrar el titulo proporcionado', () => {
+        render(<GiftItem title={title} url={url} />);
+        expect(screen.getByText(title)).toBeTruthy();
     });
 
 });
