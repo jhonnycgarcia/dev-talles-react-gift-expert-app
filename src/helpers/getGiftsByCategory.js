@@ -16,5 +16,6 @@ export const getGiftsByCategory = async(category) => {
         title: gif.title,
         url: gif.images.downsized_medium.url,
     }));
-    console.log(gifs);
+    console.log(gifs)
+    return gifs;
 }
