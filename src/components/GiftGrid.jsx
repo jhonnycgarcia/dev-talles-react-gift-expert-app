@@ -4,23 +4,22 @@ import { useEffect, useState } from 'react';
 import { GiftItem } from './GiftItem';
 
 import { getGiftsByCategory } from '../helpers/getGiftsByCategory';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 
 
 export const GiftGrid = ({ category }) => {
-    const [images, setimages] = useState([]);
 
-    const getImages = async() => {
-        const images = await getGiftsByCategory(category);
-        setimages(images);
-    };
-    
-    useEffect(() => {
-        getImages(images);
-    //   return () => {
-    //     second
-    //   }
-    }, [ ]);
+    const { images, isLoading} = useFetchGifs(category);
+    // const [images, setimages] = useState([]);
+
+
+    // useEffect(() => {
+    //     getImages(images);
+    // //   return () => {
+    // //     second
+    // //   }
+    // }, [ ]);
 
     return (
         <>
