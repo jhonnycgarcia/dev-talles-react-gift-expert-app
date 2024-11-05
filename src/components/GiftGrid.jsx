@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+
+import { GiftItem } from './GiftItem';
+
 import { getGiftsByCategory } from '../helpers/getGiftsByCategory';
 
 
@@ -22,13 +25,14 @@ export const GiftGrid = ({ category }) => {
     return (
         <>
             <h3>{category}</h3>
-            <ol>
-                { images.map(({id, title}) => (
-                    <li key={id}>
-                        { title }
-                    </li>
+            <div className='card-grid'>
+                { images.map((image) => (
+                    <GiftItem 
+                        key={image.id} 
+                        {...image}
+                    />
                 )) }
-            </ol>
+            </div>
         </>
     );
 }
