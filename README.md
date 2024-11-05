@@ -14,3 +14,5 @@ Currently, two official plugins are available:
 `https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76`
 
 `https://gist.github.com/Klerith/e4fca6ac127ccb9abd1e8ad77fcd52f1`
+
+`https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177`
