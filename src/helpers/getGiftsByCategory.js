@@ -1,7 +1,8 @@
 export const getGiftsByCategory = async(category) => {
 
     const queryParams = new URLSearchParams({
-        api_key: import.meta.env.VITE_GIPHY_API_KEY,
+        // api_key: import.meta.env.VITE_GIPHY_API_KEY,
+        api_key: "tG8ShGGyBeX4qtKfCIZ4rOmK0tmkcLbp",
         q: category,
         limit: 20,
     });
