@@ -14,7 +14,6 @@ export const AddCategory = ({ onNewCategory }) => {
         e.preventDefault();
         const newValue = inputValue.trim();
         if(newValue.length <= 1) { return; }
-        console.log('dentro', newValue);
         onNewCategory(newValue);
         setInputValue('');
     };

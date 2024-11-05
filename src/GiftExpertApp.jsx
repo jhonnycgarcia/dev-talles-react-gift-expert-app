@@ -3,7 +3,7 @@ import { AddCategory, GiftGrid } from "./components";
 
 export const GiftExpertApp = () => {
 
-  const [categories, setcategories] = useState(['One Punch'])
+  const [categories, setcategories] = useState([])
 
   const onAddCategory = (category) => {
     if(categories.includes(category)) { return; }
