@@ -1,11 +1,20 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import { getGiftsByCategory } from '../helpers/getGiftsByCategory';
 
 
 
 export const GiftGrid = ({ category }) => {
 
-    getGiftsByCategory(category);
+    
+    useEffect(() => {
+        getGiftsByCategory(category);
+    
+    //   return () => {
+    //     second
+    //   }
+    }, [ ])
+    
 
     return (
         <>
